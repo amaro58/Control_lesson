@@ -1,8 +1,8 @@
 ﻿string[] workArray = FillArray();
-// string[] resultArray = GenerateNewArray(workArray);
+string[] resultArray = GenerateNewArray(workArray);
 string firstArray = PrintArray(workArray);
-// string secondArray = PrintArray(resultArray);
-// Console.WriteLine(firstArray + " -> " + secondArray);
+string secondArray = PrintArray(resultArray);
+Console.WriteLine(firstArray + " -> " + secondArray);
 
 string[] FillArray()
 {
@@ -30,31 +30,31 @@ string PrintArray(string[] workArray)
     return stringArray;
 }
 
-// int CountStringSymbols(string[] workArray)
-// {
-//     int counter = 0;
-//     foreach (string item in workArray)
-//     {
-//         if (item.Length <= 3)
-//         {
-//             counter++;
-//         }
-//     }
-//     return counter;
-// }
+int CountStringSymbols(string[] workArray)
+{
+    int counter = 0;
+    foreach (string item in workArray)
+    {
+        if (item.Length <= 3)
+        {
+            counter++;
+        }
+    }
+    return counter;
+}
 
-// string[] GenerateNewArray(string[] workArray)
-// {
-//     int resultArrayLength = CountStringSymbols(workArray);
-//     string[] resultArray = new string[resultArrayLength];
-//     int i = 0;
-//     foreach (string item in workArray)
-//     {
-//         if (item.Length <= 3)
-//         {
-//             resultArray[i] = item;
-//             i++;
-//         }
-//     }
-//     return resultArray;
-// }
+string[] GenerateNewArray(string[] workArray)
+{
+    int resultArrayLength = CountStringSymbols(workArray);
+    string[] resultArray = new string[resultArrayLength];
+    int i = 0;
+    foreach (string item in workArray)
+    {
+        if (item.Length <= 3)
+        {
+            resultArray[i] = item;
+            i++;
+        }
+    }
+    return resultArray;
+}
